@@ -7,4 +7,4 @@ gulp.task('bookmarklet', function() {
         .pipe(gulp.dest('min.js'));
 });
 
-gulp.task('default', [ 'bookmarklet' ]);
+gulp.task('default', gulp.series('bookmarklet'));
